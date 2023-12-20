@@ -5,7 +5,8 @@ import ImgHolder from './components/ImgHolder.vue'
 
 <template>
   <header>
-    <ImgHolder />
+    <ImgHolder icon="fa-solid fa-check" />
+    <ImgHolder icon="fa-regular fa-user-circle" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
