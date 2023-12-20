@@ -1,4 +1,13 @@
 import type { Preview } from "@storybook/vue3";
+import { setup } from '@storybook/vue3'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+setup((app) => {
+  library.add(faCheck)
+  app.component('font-awesome-icon', FontAwesomeIcon)
+})
 
 const preview: Preview = {
   parameters: {
