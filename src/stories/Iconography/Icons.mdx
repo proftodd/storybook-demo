@@ -1,5 +1,13 @@
 import { IconGallery, IconItem, Meta } from '@storybook/blocks'
+
+<script setup>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCheck, faUserCircle)
+</script>
 
 <Meta title="Iconography/Font Awesome Icons" />
 
@@ -9,9 +17,9 @@ These icons from [Font Awesome](https://fontawesome.com) are cool
 
 <IconGallery>
     <IconItem name="Solid Check">
-        <font-awesome-icon icon="fa-solid fa-check" />
+        <FontAwesomeIcon :icon="['fa-solid', 'fa-check']" />
     </IconItem>
     <IconItem name="User Circle">
-        <font-awesome-icon icon="fa-regular fa-user-circle" />
+        <FontAwesomeIcon :icon="['fa-regular', 'fa-user-circle']" />
     </IconItem>
 </IconGallery>
